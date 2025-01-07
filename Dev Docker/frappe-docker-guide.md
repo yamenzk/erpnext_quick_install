@@ -72,6 +72,7 @@ This guide will help you set up a Frappe development environment using Docker on
        working_dir: /workspace
        ports:
          - "8000-8005:8000-8005"
+         - "8080:8080"
          - "9000-9005:9000-9005"
        depends_on:
          - mariadb
