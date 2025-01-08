@@ -66,6 +66,7 @@ This guide will help you set up a Frappe development environment using Docker on
        user: "1000:1000"
        environment:
          - SHELL=/bin/bash
+         - CHOKIDAR_USEPOLLING=true
        volumes:
          - ./scripts:/workspace/scripts
          - ./frappe-bench:/workspace/frappe-bench
@@ -203,6 +204,7 @@ mkdir frappe-bench
      - Redis Queue: 11000
      - Redis SocketIO: 12000
      - Frappe: 8000-8005, 9000-9005
+     - Frontend: 8080
 
 2. Permission issues:
    - Make sure the frappe-bench directory exists before starting containers
