@@ -131,6 +131,7 @@ This guide will help you set up a Frappe development environment using Docker on
    bench new-site dev.localhost \
    --mariadb-root-password 123 \
    --admin-password admin \
+   --db-root-username root \
    --no-mariadb-socket
 
    bench --site dev.localhost set-config developer_mode 1
@@ -140,7 +141,7 @@ This guide will help you set up a Frappe development environment using Docker on
    echo "Setup complete! You can now start developing with Frappe."
    ```
 
-4. Fix line endings in init.sh using PowerShell:
+4. Fix line endings in init.sh using PowerShell (Not required if inside WSL):
    ```powershell
    $content = Get-Content -Path "scripts\init.sh" -Raw
    $content = $content -replace "`r`n", "`n"
